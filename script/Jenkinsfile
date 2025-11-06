@@ -6,8 +6,10 @@ pipeline{
     stages{
         stage('sonar-scan'){
             steps{
-                withSonarQubeEnv('sonarQube')
-                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Akomolafegrace_geo-app'
+                withSonarQubeEnv('sonarQube Server'){
+                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Akomolafegrace_geo-app'
+                }
+                
             }
         }
         stage("maven"){
