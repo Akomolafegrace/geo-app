@@ -44,7 +44,7 @@ pipeline{
         stage ('Image tagging') {
             steps{
                 sh 'docker tag utc-app:v.${BUILD_ID} 940482416510.dkr.ecr.us-east-1.amazonaws.com/utc-app:latest'
-                
+            }   
         }
         stage ('push image') {
             steps{
