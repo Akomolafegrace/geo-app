@@ -26,7 +26,7 @@ pipeline{
         }
         stage ('upload artifact'){
             steps{
-                sh "curl -u admin:APALKYmZCo8dMhFq6cvqwp3mgid -T target/bioMedical-0.0.3-SNAPSHOT.jar http://ec2-54-210-126-112.compute-1.amazonaws.com:8081/artifactory/geolocation/geo/bio_${BUILD_ID}.jar"
+                sh "curl -u admin:APALKYmZCo8dMhFq6cvqwp3mgid -T target/bioMedical-0.0.3-SNAPSHOT.jar http://ec2-98-88-33-42.compute-1.amazonaws.com:8081/artifactory/geolocation/geo/bio_${BUILD_ID}.jar"
 
             }
         }
